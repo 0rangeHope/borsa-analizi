@@ -89,7 +89,7 @@ if st.button("Anlık Verileri Çek ve Günlük Rapor Oluştur"):
                         return f'color: {color}'
                     return ''
                 
-                styled_df = df_sonuclar.style.applymap(color_negative_red, subset=['Günlük Değişim (%)'])
+                styled_df = df_sonuclar.style.map(color_negative_red, subset=['Günlük Değişim (%)'])
                 st.dataframe(styled_df, use_container_width=True)
                 
                 st.subheader("🧠 Bulut Yapay Zeka Günlük Kapanış Raporu")
