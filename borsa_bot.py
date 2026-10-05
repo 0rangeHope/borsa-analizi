@@ -110,7 +110,7 @@ with tab1:
                         client = Groq(api_key=api_anahtari)
                         cevap = client.chat.completions.create(
                             messages=[{"role": "user", "content": prompt_teknik}],
-                            model="llama3-8b-8192"
+                            model="llama-3.1-8b-instant"
                         )
                         st.markdown(cevap.choices[0].message.content)
                     except Exception as e:
@@ -183,7 +183,7 @@ with tab2:
                         client = Groq(api_key=api_anahtari)
                         cevap_temel = client.chat.completions.create(
                             messages=[{"role": "user", "content": prompt_temel}],
-                            model="llama3-8b-8192"
+                            model="llama-3.1-8b-instant"
                         )
                         st.success("Temel analiz hesaplamaları tamamlandı.")
                         st.markdown(cevap_temel.choices[0].message.content)
